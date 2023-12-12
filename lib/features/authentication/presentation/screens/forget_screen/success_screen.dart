@@ -4,6 +4,7 @@ import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/app_router.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/core/widgets/custom_button.dart';
+import 'package:foodc_app/core/widgets/custom_slide.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
@@ -13,7 +14,9 @@ class SuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: CustomSlideAnimate(
+        slide: Constance.left,
+          child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -39,11 +42,12 @@ class SuccessScreen extends StatelessWidget {
               },
               textStyle: Styles.stylePrimaryColor24,
               buttonColor: Colors.white,
-              borderSide: const BorderSide(color: Constance.kPrimaryColor,width: 2.5),
+              borderSide:
+                  const BorderSide(color: Constance.kPrimaryColor, width: 2.5),
             ),
           )
         ],
-      ),
+      )),
     );
   }
 }

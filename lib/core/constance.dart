@@ -5,6 +5,10 @@ abstract class Constance {
 
   static const kLogoName = 'Talabat';
   static const kLogoName2 = 'Ty';
+  static const right = 'right';
+  static const left = 'left';
+  static const up = 'up';
+  static const down = 'down';
   static const kPrimaryColor = Color(0xffFD7E7E);
   static const kWhiteColor = Colors.white;
   static const kGreyColor = Colors.grey;

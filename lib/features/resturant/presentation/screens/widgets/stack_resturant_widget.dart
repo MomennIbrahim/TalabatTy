@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodc_app/core/utlis/app_router.dart';
+import 'package:foodc_app/core/widgets/menu_icon.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 import '../../../../../core/constance.dart';
 import '../../../../../core/utlis/styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -21,25 +20,8 @@ class StackRestaurantWidget extends StatelessWidget {
           children: [
             Gap(50.h),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.0.w),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        GoRouter.of(context).push(AppRouter.kLayoutScreen);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_ios_rounded,
-                        color: Constance.kWhiteColor,
-                      )),
-                  SvgPicture.asset(
-                    'assets/images/menu.svg',
-                    width: 42.w,
-                    height: 42.h,
-                  ),
-                ],
-              ),
+             padding: Constance.paddingHorizontal24,
+              child: const MenuIcon(),
             ),
             Gap(37.h),
             Text(

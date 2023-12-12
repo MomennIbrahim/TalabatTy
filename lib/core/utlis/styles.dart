@@ -33,6 +33,14 @@ abstract class Styles {
     color: Colors.black,
   );
 
+  static TextStyle style16 = TextStyle(
+      fontSize: 16.0.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.black,
+      letterSpacing: .1,
+      height: 1.2
+  );
+
   static TextStyle styleGrey16 = TextStyle(
     fontSize: 16.0.sp,
     fontWeight: FontWeight.w400,
@@ -70,6 +78,12 @@ abstract class Styles {
   static TextStyle style20 = TextStyle(
     fontSize: 20.0.sp,
     fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle styleWhite20 = TextStyle(
+    fontSize: 20.0.sp,
+    fontWeight: FontWeight.w500,
+    color: Constance.kWhiteColor
   );
 
   static TextStyle styleBlue20 = TextStyle(

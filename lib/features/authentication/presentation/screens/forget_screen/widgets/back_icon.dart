@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodc_app/core/constance.dart';
 
 class BackIcon extends StatelessWidget {
   const BackIcon({super.key});
@@ -12,7 +13,7 @@ class BackIcon extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.arrow_back_ios_new_rounded)),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded,color: Constance.kWhiteColor,)),
     );
   }
 }

@@ -9,6 +9,7 @@ import 'package:foodc_app/features/home/presentation/screens/all_retaurant_disco
 import 'package:foodc_app/features/home/presentation/screens/customer_favorite_cuisines_screen.dart';
 import 'package:foodc_app/features/layout/presentation/screen/layout_screen.dart';
 import 'package:foodc_app/features/onboarding/onboarding_screen.dart';
+import 'package:foodc_app/features/resturant/presentation/screens/restaurant_details_screen.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -22,6 +23,8 @@ abstract class AppRouter {
   static const kAllRestaurantDiscountScreen = '/allRestaurantDiscountScreen';
   static const kCustomerFavoriteCuisinesScreen =
       '/customerFavoriteCuisinesScreen';
+  static const kRestaurantDetailsScreen =
+      '/restaurantDetailsScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -82,6 +85,12 @@ abstract class AppRouter {
       path: kCustomerFavoriteCuisinesScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const CustomerFavoriteCuisinesScreen();
+      },
+    ),
+    GoRoute(
+      path: kRestaurantDetailsScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const RestaurantDetailsScreen();
       },
     ),
   ]);

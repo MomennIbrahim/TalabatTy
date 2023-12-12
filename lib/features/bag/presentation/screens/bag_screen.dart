@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:foodc_app/core/constance.dart';
+import 'package:foodc_app/core/widgets/custom_slide.dart';
 import 'package:foodc_app/features/bag/presentation/screens/widgets/bag_item.dart';
-import 'package:foodc_app/features/bag/presentation/screens/widgets/bag_without_item.dart';
 import 'widgets/stack_bag_widget.dart';
 
 class BagScreen extends StatelessWidget {
@@ -8,12 +9,15 @@ class BagScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          StackBagWidget(),
-          BagItem(),
-        ],
+    return const CustomSlideAnimate(
+      slide: Constance.left,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            StackBagWidget(),
+            BagItem(),
+          ],
+        ),
       ),
     );
   }

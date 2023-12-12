@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
-import 'package:foodc_app/core/widgets/custom_button.dart';
-import 'package:foodc_app/core/widgets/custom_text_field.dart';
+import 'package:foodc_app/core/widgets/custom_slide.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/back_icon.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/back_text_button.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/confirm_button.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/confirm_new_password_field.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/forget_password_subtitle.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/forget_password_title.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/new_password_field.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/reset_password_button.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/widgets/email_text_field.dart';
 import 'package:gap/gap.dart';
 
 class NewPasswordScreen extends StatelessWidget {
@@ -21,7 +16,7 @@ class NewPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: CustomSlideAnimate(slide: Constance.left,child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0.w),
         child: SingleChildScrollView(
           child: Column(
@@ -53,7 +48,7 @@ class NewPasswordScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      )),
     );
   }
 }

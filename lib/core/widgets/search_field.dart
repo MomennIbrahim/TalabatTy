@@ -13,7 +13,7 @@ class SearchField extends StatelessWidget {
       fiiledColor: true,
       lable: 'Search for Restaurant...',
       prefixIcon: const Icon(
-        Icons.location_on,
+        Icons.location_on_outlined,
         color: Constance.kGreyColor,
       ),
       suffixIcon: const Icon(

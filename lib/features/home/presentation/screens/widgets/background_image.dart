@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:foodc_app/core/utlis/styles.dart';
 
 class BackGroundImage extends StatelessWidget {
-  const BackGroundImage({super.key, this.height});
+  const BackGroundImage({super.key, this.height, this.child});
 
   final double? height;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +20,7 @@ class BackGroundImage extends StatelessWidget {
                 'assets/images/snack-pastry-board-with-potatoes-water-black-background-top-view.png'),
             fit: BoxFit.cover),
       ),
+      child: child,
     );
   }
 }

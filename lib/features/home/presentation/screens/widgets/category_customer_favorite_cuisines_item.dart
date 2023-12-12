@@ -8,22 +8,19 @@ class CategoryCustomerFavoriteCuisinesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: EdgeInsets.only(left: 20.0.w),
-      child: Container(
-        width: 81.w,
-        height: 91.h,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12.r),
-            border: Border.all()
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset('assets/images/burger.svg'),
-            Text('Burger',style: Styles.style14,)
-          ],
-        ),
+    return Container(
+      width: 81.w,
+      height: 91.h,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all()
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          SvgPicture.asset('assets/images/burger.svg'),
+          Text('Burger',style: Styles.style14,)
+        ],
       ),
     );
   }

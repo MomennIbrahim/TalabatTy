@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utlis/styles.dart';
 
-class AllResturantItem extends StatelessWidget {
-  const AllResturantItem({super.key});
+class AllRestaurantItem extends StatelessWidget {
+  const AllRestaurantItem({super.key});
 
   @override
   Widget build(BuildContext context) {
