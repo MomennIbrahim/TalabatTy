@@ -37,7 +37,7 @@ class RegisterScreen extends StatelessWidget {
                   lable: 'Name', controller: TextEditingController()),
               Gap(16.h),
               CustomTextField(
-                  lable: 'Email Adderss', controller: TextEditingController()),
+                  lable: 'Email Address', controller: TextEditingController()),
               Gap(16.h),
               CustomTextField(
                   lable: 'Password', controller: TextEditingController()),

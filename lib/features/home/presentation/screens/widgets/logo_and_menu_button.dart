@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodc_app/core/widgets/menu_icon.dart';
 import '../../../../../core/constance.dart';
 import '../../../../../core/utlis/styles.dart';
 
@@ -27,7 +28,7 @@ class LogoAndMenuButton extends StatelessWidget {
             ],
           ),
         ),
-        SvgPicture.asset('assets/images/menu.svg'),
+        const MenuIcon(),
       ],
     );
   }

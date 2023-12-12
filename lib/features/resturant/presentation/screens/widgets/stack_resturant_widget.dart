@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodc_app/core/widgets/icon_back_and_menu_row.dart';
 import 'package:foodc_app/core/widgets/menu_icon.dart';
+import 'package:foodc_app/core/widgets/restaurant_text.dart';
 import 'package:gap/gap.dart';
 import '../../../../../core/constance.dart';
 import '../../../../../core/utlis/styles.dart';
@@ -20,14 +22,11 @@ class StackRestaurantWidget extends StatelessWidget {
           children: [
             Gap(50.h),
             Padding(
-             padding: Constance.paddingHorizontal24,
+              padding: Constance.paddingHorizontal24,
               child: const MenuIcon(),
             ),
             Gap(37.h),
-            Text(
-              'RESTAURANTES',
-              style: Styles.styleCabinSketch24,
-            ),
+            const RestaurantText(),
             Gap(29.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0.w),

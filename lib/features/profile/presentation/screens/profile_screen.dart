@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomSlideAnimate(
-      slide: Constance.left,
+      slide: Constance.up,
       child: Column(
         children: [
           const StackProfileWidget(),

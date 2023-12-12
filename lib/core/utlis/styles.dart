@@ -90,6 +90,7 @@ abstract class Styles {
       fontSize: 20.0.sp,
       fontWeight: FontWeight.w500,
       color: const Color(0xff3A98EA));
+
   static TextStyle style24 = TextStyle(
     fontSize: 24.0.sp,
     color: Colors.white,

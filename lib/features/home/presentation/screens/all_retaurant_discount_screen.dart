@@ -14,7 +14,7 @@ class AllRestaurantDiscountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomSlideAnimate(
-        slide: Constance.left,
+        slide: Constance.up,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

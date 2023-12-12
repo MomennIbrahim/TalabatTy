@@ -49,7 +49,7 @@ class MoreDiscountItem extends StatelessWidget {
                 padding: const EdgeInsets.all(0.0),
                 child: Image(
                   image: const AssetImage(
-                      'assets/images/Screenshot 2023-11-08 125611 1 1.png'),
+                      'assets/images/Screenshot.png'),
                   fit: BoxFit.cover,
                   width: mealImageWidth ?? 100.w,
                 ),

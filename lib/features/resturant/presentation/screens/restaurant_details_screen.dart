@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
-import 'package:foodc_app/core/widgets/custom_button.dart';
 import 'package:foodc_app/core/widgets/custom_slide.dart';
-import 'package:foodc_app/features/resturant/presentation/screens/widgets/best_seller_disges_item.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/widgets/best_seller_dishes_listview.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/widgets/rating_bar_and_res_name.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/widgets/restaurant_review_listview.dart';
@@ -19,7 +17,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomSlideAnimate(
-        slide: Constance.left,
+        slide: Constance.up,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

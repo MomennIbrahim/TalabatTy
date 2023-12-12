@@ -17,7 +17,7 @@ class AllRestaurantGridView extends StatelessWidget {
           crossAxisCount: 3,
           crossAxisSpacing: 7.w,
           mainAxisSpacing: 25.h,
-          children: List.generate(20, (index) => GestureDetector(onTap: (){
+          children: List.generate(9, (index) => GestureDetector(onTap: (){
             GoRouter.of(context).push(AppRouter.kRestaurantDetailsScreen);
           },child: const AllRestaurantItem()),
           )

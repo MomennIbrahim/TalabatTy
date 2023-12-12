@@ -5,10 +5,11 @@ import 'package:foodc_app/features/authentication/presentation/screens/forget_sc
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/verify_screen.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/login_screen.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/register_screen.dart';
-import 'package:foodc_app/features/home/presentation/screens/all_retaurant_discount.dart';
+import 'package:foodc_app/features/home/presentation/screens/all_retaurant_discount_screen.dart';
 import 'package:foodc_app/features/home/presentation/screens/customer_favorite_cuisines_screen.dart';
 import 'package:foodc_app/features/layout/presentation/screen/layout_screen.dart';
 import 'package:foodc_app/features/onboarding/onboarding_screen.dart';
+import 'package:foodc_app/features/resturant/presentation/screens/menu_restaurant_screen.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/restaurant_details_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -25,6 +26,8 @@ abstract class AppRouter {
       '/customerFavoriteCuisinesScreen';
   static const kRestaurantDetailsScreen =
       '/restaurantDetailsScreen';
+  static const kMenuRestaurantScreen =
+      '/menuRestaurantScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -91,6 +94,13 @@ abstract class AppRouter {
       path: kRestaurantDetailsScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const RestaurantDetailsScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kMenuRestaurantScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const MenuRestaurantScreen();
       },
     ),
   ]);

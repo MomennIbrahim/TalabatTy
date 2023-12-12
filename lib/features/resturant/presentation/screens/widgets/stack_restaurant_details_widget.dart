@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/core/widgets/icon_back_and_menu_row.dart';
+import 'package:foodc_app/core/widgets/restaurant_text.dart';
 import 'package:foodc_app/core/widgets/search_field.dart';
 import 'package:foodc_app/features/home/presentation/screens/widgets/background_image.dart';
 import 'package:gap/gap.dart';
@@ -23,10 +24,7 @@ class StackRestaurantDetailsWidget extends StatelessWidget {
                 Gap(40.h),
                 const IconBackAndMenuRow(),
                 Gap(23.h),
-                Text(
-                  'RESTAURANTS',
-                  style: Styles.styleCabinSketch24,
-                ),
+                const RestaurantText(),
                 Gap(8.h),
                 Text(
                   'Select your area to see the restaurant menu',

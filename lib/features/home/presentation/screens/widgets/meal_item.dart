@@ -4,8 +4,8 @@ import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:gap/gap.dart';
 
-class CustomerFavoriteCuisinesItem extends StatelessWidget {
-  const CustomerFavoriteCuisinesItem({super.key});
+class MealItem extends StatelessWidget {
+  const MealItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,25 @@ class CustomerFavoriteCuisinesItem extends StatelessWidget {
                     topLeft: Radius.circular(15.r),
                     bottomLeft: Radius.circular(15.r),
                   ),
-                  child: Image(
-                    image: const AssetImage('assets/images/hawawshi.png'),
-                    fit: BoxFit.cover,
-                    width: 100.w,
-                    height: 130.h,
+                  child: Stack(
+                    alignment: Alignment.topLeft,
+                    children: [
+                      Image(
+                        image: const AssetImage('assets/images/hawawshi.png'),
+                        fit: BoxFit.cover,
+                        width: 100.w,
+                        height: 130.h,
+                      ),
+                      Container(
+                        height: 25.h,
+                        width: 74.w,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(15.r),bottomRight: Radius.circular(15.r))
+                        ),
+                        child: Center(child: Text('Sale 50%',style: Styles.styleWhite12,)),
+                      )
+                    ],
                   )),
               Expanded(
                 child: Padding(
