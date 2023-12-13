@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodc_app/core/constance.dart';
+import 'package:foodc_app/core/widgets/custom_slide.dart';
 
 import '../../../../../core/utlis/styles.dart';
 

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class Constance {
 
-  static const kLogoName = 'Talabat';
-  static const kLogoName2 = 'Ty';
+  static const kLogoName = 'Yalla';
+  static const kLogoName2 = 'Order';
   static const right = 'right';
   static const left = 'left';
   static const up = 'up';

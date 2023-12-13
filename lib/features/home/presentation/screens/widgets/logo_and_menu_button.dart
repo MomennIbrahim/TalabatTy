@@ -23,7 +23,7 @@ class LogoAndMenuButton extends StatelessWidget {
               ),
               TextSpan(
                 text: Constance.kLogoName2,
-                style: Styles.styleBlue20,
+                style: Styles.styleBlue20.copyWith(fontFamily: Constance.cabinSketchFont,fontSize: 26),
               ),
             ],
           ),

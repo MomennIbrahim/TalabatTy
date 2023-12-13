@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import '../../../../../core/constance.dart';
 import '../../../../../core/utlis/styles.dart';
@@ -20,7 +19,7 @@ class MoreDiscountItem extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          SvgPicture.asset('assets/images/Group1171276174.svg'),
+          // SvgPicture.asset('assets/images/Group1171276174.svg'),
           Row(
             children: [
               Expanded(

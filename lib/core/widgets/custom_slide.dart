@@ -11,12 +11,13 @@ class CustomSlideAnimate extends StatelessWidget {
   final Widget child;
   final String slide;
 
+
   @override
   Widget build(BuildContext context) {
     if (slide == 'up') {
       return FadeInUpBig(duration: const Duration(milliseconds: 600),child: child,);
     } else if (slide == 'down') {
-      return SlideInDown(child: child);
+      return FadeInDownBig(duration: const Duration(milliseconds: 500),child: child,);
     } else if (slide == 'right') {
       return SlideInRight(child: child);
     } else if(slide == 'left') {

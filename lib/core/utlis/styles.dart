@@ -58,6 +58,12 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle styleWhite18 = TextStyle(
+    fontSize: 18.0.sp,
+    color: Constance.kWhiteColor,
+    fontWeight: FontWeight.w400,
+  );
+
   static TextStyle styleGrey18 = TextStyle(
     fontSize: 18.0.sp,
     fontWeight: FontWeight.w400,
@@ -114,6 +120,12 @@ abstract class Styles {
     color: Constance.kPrimaryColor,
     fontWeight: FontWeight.w700,
   );
+
+  static TextStyle style26 = TextStyle(
+    fontSize: 26.0.sp,
+    fontWeight: FontWeight.w500,
+  );
+
   static TextStyle styleBlack32 = TextStyle(
     fontSize: 32.0.sp,
     color: Colors.black,

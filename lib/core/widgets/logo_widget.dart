@@ -20,7 +20,7 @@ class LogoWidget extends StatelessWidget {
             ),
             TextSpan(
               text: Constance.kLogoName2,
-              style: Styles.styleBlack32.copyWith(color: Colors.blue),
+              style: Styles.styleBlack32.copyWith(color: Colors.blue,fontFamily: Constance.cabinSketchFont),
             ),
           ],
         ),
