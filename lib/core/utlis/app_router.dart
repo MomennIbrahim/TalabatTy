@@ -14,9 +14,9 @@ import 'package:foodc_app/features/menu/presentation/screen/language_screen.dart
 import 'package:foodc_app/features/menu/presentation/screen/menu_screen.dart';
 import 'package:foodc_app/features/menu/presentation/screen/offers_screen.dart';
 import 'package:foodc_app/features/onboarding/onboarding_screen.dart';
+import 'package:foodc_app/features/profile/presentation/screens/edit_profile_screen.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/menu_restaurant_screen.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/restaurant_details_screen.dart';
-import 'package:foodc_app/test.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -37,6 +37,7 @@ abstract class AppRouter {
   static const kOfferScreen = '/offerScreen';
   static const kLanguageScreen = '/languageScreen';
   static const kAboutUsScreen = '/aboutUSScreen';
+  static const kEditProfileScreen = '/editProfileScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -139,6 +140,12 @@ abstract class AppRouter {
       path: kAboutUsScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const AboutUsScreen();
+      },
+    ),
+    GoRoute(
+      path: kEditProfileScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const EditProfileScreen();
       },
     ),
   ]);

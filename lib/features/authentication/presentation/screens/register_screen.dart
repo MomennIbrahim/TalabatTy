@@ -5,9 +5,12 @@ import 'package:foodc_app/core/widgets/custom_text_field.dart';
 import 'package:foodc_app/core/widgets/logo_widget.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/widgets/custom_or_text.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/widgets/custom_text.dart';
+import 'package:foodc_app/features/authentication/presentation/screens/widgets/email_text_field.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/widgets/icons_login.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/widgets/create_account_button.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/widgets/log_in_text.dart';
+import 'package:foodc_app/features/authentication/presentation/screens/widgets/name_text_field.dart';
+import 'package:foodc_app/features/authentication/presentation/screens/widgets/password_text_field.dart';
 import 'package:gap/gap.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -33,14 +36,11 @@ class RegisterScreen extends StatelessWidget {
                 style: Styles.styleBlack32,
               ),
               Gap(35.h),
-              CustomTextField(
-                  lable: 'Name', controller: TextEditingController()),
+              NameTextField(controller: TextEditingController()),
               Gap(16.h),
-              CustomTextField(
-                  lable: 'Email Address', controller: TextEditingController()),
+              EmailTextField(emailController: TextEditingController()),
               Gap(16.h),
-              CustomTextField(
-                  lable: 'Password', controller: TextEditingController()),
+             PasswordTextField(passwordController: TextEditingController()),
               Gap(30.h),
               const CreateAccountButton(),
               Gap(25.h),
