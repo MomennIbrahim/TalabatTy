@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/features/bag/presentation/screens/widgets/add_minus_row_widget.dart';
-import 'package:foodc_app/features/menu/presentation/screen/widgets/favorite_background.dart';
+import 'package:foodc_app/features/menu/presentation/screen/widgets/custom_background.dart';
 import 'package:gap/gap.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -14,7 +14,7 @@ class FavoriteScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const FavoriteBackGround(),
+          const CustomBackGround(text: 'my favorite'),
           Gap(32.h),
           Padding(
             padding: Constance.paddingHorizontal24,

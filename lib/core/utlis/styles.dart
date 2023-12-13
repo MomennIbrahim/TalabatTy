@@ -86,6 +86,12 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
   );
 
+  static TextStyle stylePrimaryColor20 = TextStyle(
+    fontSize: 20.0.sp,
+    fontWeight: FontWeight.w500,
+    color: Constance.kPrimaryColor
+  );
+
   static TextStyle styleWhite20 = TextStyle(
     fontSize: 20.0.sp,
     fontWeight: FontWeight.w500,

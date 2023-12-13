@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
+import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/back_icon.dart';
 import 'package:foodc_app/features/home/presentation/screens/widgets/background_image.dart';
 import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
 
-class FavoriteBackGround extends StatelessWidget {
-  const FavoriteBackGround({super.key});
+class CustomBackGround extends StatelessWidget {
+  const CustomBackGround({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -17,22 +19,12 @@ class FavoriteBackGround extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Gap(50.h),
-          Padding(
-            padding: Constance.paddingHorizontal26,
-            child: IconButton(
-                onPressed: () {
-                  GoRouter.of(context).pop();
-                },
-                icon: const Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  color: Constance.kWhiteColor,
-                )),
-          ),
+          const BackIcon(),
           Gap(33.h),
           Align(
               alignment: Alignment.center,
               child: Text(
-                'My Favorite',
+                text.toUpperCase(),
                 style: Styles.styleCabinSketch24,
               ))
         ],

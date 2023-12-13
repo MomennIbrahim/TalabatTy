@@ -8,8 +8,11 @@ import 'package:foodc_app/features/authentication/presentation/screens/register_
 import 'package:foodc_app/features/home/presentation/screens/all_retaurant_discount_screen.dart';
 import 'package:foodc_app/features/home/presentation/screens/customer_favorite_cuisines_screen.dart';
 import 'package:foodc_app/features/layout/presentation/screen/layout_screen.dart';
+import 'package:foodc_app/features/menu/presentation/screen/about_us_screen.dart';
 import 'package:foodc_app/features/menu/presentation/screen/favorite_screen.dart';
+import 'package:foodc_app/features/menu/presentation/screen/language_screen.dart';
 import 'package:foodc_app/features/menu/presentation/screen/menu_screen.dart';
+import 'package:foodc_app/features/menu/presentation/screen/offers_screen.dart';
 import 'package:foodc_app/features/onboarding/onboarding_screen.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/menu_restaurant_screen.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/restaurant_details_screen.dart';
@@ -27,14 +30,13 @@ abstract class AppRouter {
   static const kAllRestaurantDiscountScreen = '/allRestaurantDiscountScreen';
   static const kCustomerFavoriteCuisinesScreen =
       '/customerFavoriteCuisinesScreen';
-  static const kRestaurantDetailsScreen =
-      '/restaurantDetailsScreen';
-  static const kMenuRestaurantScreen =
-      '/menuRestaurantScreen';
-  static const kMenuScreen =
-      '/menuScreen';
+  static const kRestaurantDetailsScreen = '/restaurantDetailsScreen';
+  static const kMenuRestaurantScreen = '/menuRestaurantScreen';
+  static const kMenuScreen = '/menuScreen';
   static const kFavoriteScreen = '/favoriteScreen';
-
+  static const kOfferScreen = '/offerScreen';
+  static const kLanguageScreen = '/languageScreen';
+  static const kAboutUsScreen = '/aboutUSScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -103,25 +105,40 @@ abstract class AppRouter {
         return const RestaurantDetailsScreen();
       },
     ),
-
     GoRoute(
       path: kMenuRestaurantScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const MenuRestaurantScreen();
       },
     ),
-
     GoRoute(
       path: kMenuScreen,
       builder: (BuildContext context, GoRouterState state) {
-        return MenuScreen();
+        return const MenuScreen();
       },
     ),
-
     GoRoute(
       path: kFavoriteScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const FavoriteScreen();
+      },
+    ),
+    GoRoute(
+      path: kOfferScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const OfferScreen();
+      },
+    ),
+    GoRoute(
+      path: kLanguageScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const LanguageScreen();
+      },
+    ),
+    GoRoute(
+      path: kAboutUsScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const AboutUsScreen();
       },
     ),
   ]);
