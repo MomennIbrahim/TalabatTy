@@ -24,7 +24,7 @@ class IconBackAndMenuRow extends StatelessWidget {
                 Icons.arrow_back_ios_rounded,
                 color: Constance.kWhiteColor,
               )),
-           MenuIcon(),
+           const MenuIcon(),
         ],
       ),
     );

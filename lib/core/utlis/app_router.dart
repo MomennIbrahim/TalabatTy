@@ -1,23 +1,25 @@
 import 'package:flutter/cupertino.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/success_screen.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/verify_screen.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/login_screen.dart';
-import 'package:foodc_app/features/authentication/presentation/screens/register_screen.dart';
-import 'package:foodc_app/features/home/presentation/screens/all_retaurant_discount_screen.dart';
-import 'package:foodc_app/features/home/presentation/screens/customer_favorite_cuisines_screen.dart';
-import 'package:foodc_app/features/layout/presentation/screen/layout_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/about_us_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/favorite_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/language_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/menu_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/offers_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/track_order_screen.dart';
-import 'package:foodc_app/features/onboarding/onboarding_screen.dart';
-import 'package:foodc_app/features/profile/presentation/screens/edit_profile_screen.dart';
-import 'package:foodc_app/features/resturant/presentation/screens/menu_restaurant_screen.dart';
-import 'package:foodc_app/features/resturant/presentation/screens/restaurant_details_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/success_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/verify_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/login_screen.dart';
+import 'package:foodc_app/features/food_feature/authentication/presentation/screens/register_screen.dart';
+import 'package:foodc_app/features/food_feature/home/presentation/screens/all_retaurant_discount_screen.dart';
+import 'package:foodc_app/features/food_feature/home/presentation/screens/customer_favorite_cuisines_screen.dart';
+import 'package:foodc_app/features/food_feature/layout/presentation/screen/layout_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/about_us_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/favorite_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/language_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/menu_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/offers_screen.dart';
+import 'package:foodc_app/features/food_feature/menu/presentation/screen/track_order_screen.dart';
+import 'package:foodc_app/features/food_feature/onboarding/onboarding_screen.dart';
+import 'package:foodc_app/features/food_feature/profile/presentation/screens/edit_profile_screen.dart';
+import 'package:foodc_app/features/food_feature/profile/presentation/screens/my_order_screen.dart';
+import 'package:foodc_app/features/food_feature/profile/presentation/screens/saved_address_screen.dart';
+import 'package:foodc_app/features/food_feature/resturant/presentation/screens/menu_restaurant_screen.dart';
+import 'package:foodc_app/features/food_feature/resturant/presentation/screens/restaurant_details_screen.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -40,6 +42,8 @@ abstract class AppRouter {
   static const kAboutUsScreen = '/aboutUSScreen';
   static const kEditProfileScreen = '/editProfileScreen';
   static const kTrackOrderScreen = '/trackOrderScreen';
+  static const kMyOrderScreen = '/myOrderScreen';
+  static const kSavedAddressScreen = '/savedAddressScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -154,6 +158,18 @@ abstract class AppRouter {
       path: kTrackOrderScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const TrackOrderScreen();
+      },
+    ),
+    GoRoute(
+      path: kMyOrderScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const MyOrderScreen();
+      },
+    ),
+    GoRoute(
+      path: kSavedAddressScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const SavedAddressScreen();
       },
     ),
   ]);

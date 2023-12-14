@@ -1,149 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:foodc_app/core/constance.dart';
-import 'package:foodc_app/core/utlis/styles.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
 
-class CustomTracker extends StatelessWidget {
-  const CustomTracker({
-    super.key,
-  });
+class MapScreen extends StatelessWidget {
+  const MapScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: Constance.paddingHorizontal24,
-      child: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Map Screen'),
+      ),
+      body: FlutterMap(
+        options: const MapOptions(
+          initialCenter: LatLng(30.06263,  31.24967),
+            initialZoom: 8.2,
+        ),
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SvgPicture.asset('assets/images/storefront-sharp.svg',
-                      width: 32.w, height: 32.h),
-                  Gap(10.w),
-                  Padding(
-                    padding: EdgeInsets.only(top: 30.0.h),
-                    child: SvgPicture.asset(
-                      'assets/images/dash.svg',
-                      color: Constance.kPrimaryColor,
-                    ),
-                  ),
-                ],
-              ),
-              Gap(12.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Order Accepted',
-                    style: Styles.style16,
-                  ),
-                  Gap(8.h),
-                  Text(
-                    'Preparing your order',
-                    style: Styles.style12,
-                  ),
-                ],
-              )
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/storefront-sharp.svg',
-                    width: 32.w,
-                    height: 32.h,
-                    color: Colors.black,
-                  ),
-                  Gap(10.w),
-                  Padding(
-                    padding: EdgeInsets.only(top: 30.0.h),
-                    child: SvgPicture.asset('assets/images/dash.svg',
-                        color: Colors.grey),
-                  ),
-                ],
-              ),
-              Gap(12.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Order Ready ',
-                    style: Styles.style16,
-                  ),
-                  Gap(8.h),
-                  Text(
-                    'Preparing your order',
-                    style: Styles.style12,
-                  ),
-                ],
-              )
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SvgPicture.asset('assets/images/storefront-sharp.svg',
-                      width: 32.w, height: 32.h, color: Colors.black),
-                  Gap(10.w),
-                  Padding(
-                    padding: EdgeInsets.only(top: 30.0.h),
-                    child: SvgPicture.asset(
-                      'assets/images/dash.svg',
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-              Gap(12.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Order Picked Up',
-                    style: Styles.style16,
-                  ),
-                  Gap(8.h),
-                  Text(
-                    'Preparing your order',
-                    style: Styles.style12,
-                  ),
-                ],
-              )
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SvgPicture.asset('assets/images/storefront-sharp.svg',
-                  width: 32.w, height: 32.h, color: Colors.black),
-              Gap(22.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Order Delivered',
-                    style: Styles.style16,
-                  ),
-                  Gap(8.h),
-                  Text(
-                    'Preparing your order',
-                    style: Styles.style12,
-                  ),
-                ],
-              )
-            ],
+          TileLayer(
+            urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            subdomains: ['a', 'b', 'c'], // OpenStreetMap tile servers
           ),
         ],
       ),
