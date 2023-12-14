@@ -15,6 +15,12 @@ abstract class Styles {
     color: Colors.white,
   );
 
+  static TextStyle styleWhite13 = TextStyle(
+    fontSize: 13.0.sp,
+    fontWeight: FontWeight.w400,
+    color: Colors.white,
+  );
+
   static TextStyle styleGrey14 = TextStyle(
     fontSize: 14.0.sp,
     fontWeight: FontWeight.w400,

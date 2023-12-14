@@ -47,12 +47,12 @@ class _MenuRestaurantScreenState extends State<MenuRestaurantScreen>
     const MealItem(),
     Padding(
       padding:Constance.paddingHorizontal24,
-      child: const MoreDiscountItem(),
+      child: const MoreDiscountItem(image: 'assets/images/Screenshot.png',title: 'Sausage Hawawshi El maqam'),
     ),
     const MealItem(),
     Padding(
       padding:Constance.paddingHorizontal24,
-      child: const MoreDiscountItem(),
+      child: const MoreDiscountItem(image: 'assets/images/Screenshot.png',title: 'Sausage Hawawshi El maqam'),
     ),
     const MealItem(),
   ];

@@ -5,9 +5,11 @@ import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:gap/gap.dart';
 
 class MoreDiscountItem extends StatelessWidget {
-  const MoreDiscountItem({super.key, this.mealImageWidth});
+  const MoreDiscountItem({super.key, this.mealImageWidth, required this.image, required this.title});
 
   final double? mealImageWidth;
+  final String image;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class MoreDiscountItem extends StatelessWidget {
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 8.0.w),
                           child: Text(
-                            'Sausage Hawawshi El maqam',
+                            title,
                             style: Styles.styleWhite16,
                           ),
                         )),
@@ -47,8 +49,8 @@ class MoreDiscountItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(0.0),
                 child: Image(
-                  image: const AssetImage(
-                      'assets/images/Screenshot.png'),
+                  image:  AssetImage(
+                      image),
                   fit: BoxFit.cover,
                   width: mealImageWidth ?? 100.w,
                 ),

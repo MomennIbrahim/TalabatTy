@@ -4,7 +4,9 @@ import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/core/widgets/menu_icon.dart';
 
 class LogoAndMenuButton extends StatelessWidget {
-  const LogoAndMenuButton({super.key});
+  const LogoAndMenuButton({super.key, this.isFood = true});
+
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class LogoAndMenuButton extends StatelessWidget {
             ],
           ),
         ),
-        const MenuIcon(),
+        MenuIcon(isFood: isFood),
       ],
     );
   }

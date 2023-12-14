@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:foodc_app/features/doctor_feature/dc_layout/presentation/screen/dc_layout_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/success_screen.dart';
@@ -44,6 +45,7 @@ abstract class AppRouter {
   static const kTrackOrderScreen = '/trackOrderScreen';
   static const kMyOrderScreen = '/myOrderScreen';
   static const kSavedAddressScreen = '/savedAddressScreen';
+  static const kDcLayoutScreen = '/dcLayoutScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -170,6 +172,12 @@ abstract class AppRouter {
       path: kSavedAddressScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const SavedAddressScreen();
+      },
+    ),
+    GoRoute(
+      path: kDcLayoutScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const DcLayoutScreen();
       },
     ),
   ]);

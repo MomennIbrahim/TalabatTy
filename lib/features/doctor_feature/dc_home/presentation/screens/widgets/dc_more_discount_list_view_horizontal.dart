@@ -6,8 +6,8 @@ import 'package:foodc_app/features/food_feature/home/presentation/screens/widget
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class MoreDiscountListViewHorizontal extends StatelessWidget {
-  const MoreDiscountListViewHorizontal({super.key});
+class DcMoreDiscountListViewHorizontal extends StatelessWidget {
+  const DcMoreDiscountListViewHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MoreDiscountListViewHorizontal extends StatelessWidget {
           onTap: (){
             GoRouter.of(context).push(AppRouter.kAllRestaurantDiscountScreen);
           },
-          child: const MoreDiscountItem(image: 'assets/images/Screenshot.png',title: 'Sausage Hawawshi El maqam'),
+          child: const MoreDiscountItem(image: 'assets/images/Asian young main group hospital professional.png', title:'On everything todat'),
         ),
         separatorBuilder: (context,index)=> Gap(19.w),
         itemCount: 5,

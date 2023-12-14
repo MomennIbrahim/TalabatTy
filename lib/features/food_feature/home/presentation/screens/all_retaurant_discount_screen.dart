@@ -51,7 +51,9 @@ class AllRestaurantDiscountScreen extends StatelessWidget {
                   children: List.generate(
                       10,
                       (index) => MoreDiscountItem(
+                        title: 'Sausage Hawawshi El maqam',
                         mealImageWidth: 50.w,
+                        image: 'assets/images/Screenshot.png',
                       )),
                 ),
               )

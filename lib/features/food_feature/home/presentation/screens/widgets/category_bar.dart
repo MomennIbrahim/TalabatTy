@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:gap/gap.dart';
 
 class CategoryBar extends StatelessWidget {
-  const CategoryBar({super.key});
+  const CategoryBar({super.key, this.isFood = true});
+
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +40,11 @@ class CategoryBar extends StatelessWidget {
             itemBuilder: (context,index)=> Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: const Color(0xffFD7E7E),
+                  backgroundColor: isFood? Constance.kPrimaryColor:Constance.kBLueColor,
                   child: SvgPicture.asset(
                     'assets/images/10 truck copy 2.svg',
-                    width: 18.w,
-                    height: 18.h,
+                    width: 20.w,
+                    height: 20.h,
                     fit: BoxFit.cover,
                   ),
                 ),

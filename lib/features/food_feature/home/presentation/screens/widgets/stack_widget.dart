@@ -8,8 +8,10 @@ import 'category_bar.dart';
 import 'logo_and_menu_button.dart';
 import 'user_name.dart';
 
-class StackWidget extends StatelessWidget {
-  const StackWidget({super.key});
+class StackHomeWidget extends StatelessWidget {
+  const StackHomeWidget({super.key, this.isFood = true});
+
+  final bool isFood ;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class StackWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Gap(50.h),
-                const LogoAndMenuButton(),
+                LogoAndMenuButton(isFood: isFood),
                 const UserName(),
                 SizedBox(
                   width: 161.w,
@@ -39,7 +41,7 @@ class StackWidget extends StatelessWidget {
               ],
             ),
           ),
-          const CategoryBar(),
+          CategoryBar(isFood: isFood),
         ],
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:foodc_app/features/doctor_feature/dc_home/presentation/screens/dc_home_screen.dart';
 import 'package:foodc_app/features/food_feature/bag/presentation/screens/bag_screen.dart';
-import 'package:foodc_app/features/food_feature/home/presentation/screens/home_screen.dart';
 import 'package:foodc_app/features/food_feature/profile/presentation/screens/profile_screen.dart';
 import 'package:foodc_app/features/food_feature/resturant/presentation/screens/resturant_screen.dart';
 import 'package:meta/meta.dart';
@@ -22,7 +22,7 @@ class DcLayoutCubit extends Cubit<DcLayoutState> {
   }
 
   List<Widget> dcScreens = [
-    const HomeScreen(),
+    const DcHomeScreen(),
     const RestaurantScreen(),
     const BagScreen(),
     const ProfileScreen(),
