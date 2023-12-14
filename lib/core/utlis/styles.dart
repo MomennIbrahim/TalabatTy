@@ -41,6 +41,14 @@ abstract class Styles {
       height: 1.2
   );
 
+  static TextStyle stylePrimaryColor16 = TextStyle(
+      fontSize: 16.0.sp,
+      fontWeight: FontWeight.w400,
+      color: Constance.kPrimaryColor,
+      letterSpacing: .1,
+      height: 1.2
+  );
+
   static TextStyle styleGrey16 = TextStyle(
     fontSize: 16.0.sp,
     fontWeight: FontWeight.w400,

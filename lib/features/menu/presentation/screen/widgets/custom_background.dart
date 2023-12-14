@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/features/authentication/presentation/screens/forget_screen/widgets/back_icon.dart';
 import 'package:foodc_app/features/home/presentation/screens/widgets/background_image.dart';

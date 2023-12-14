@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/core/widgets/custom_slide.dart';
+import 'package:foodc_app/core/widgets/icon_back_and_menu_row.dart';
+import 'package:foodc_app/core/widgets/restaurant_text.dart';
+import 'package:foodc_app/features/home/presentation/screens/widgets/background_image.dart';
 import 'package:foodc_app/features/home/presentation/screens/widgets/more_discount_item.dart';
 import 'package:foodc_app/features/resturant/presentation/screens/widgets/stack_resturant_widget.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +22,17 @@ class AllRestaurantDiscountScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const StackRestaurantWidget(),
+              BackGroundImage(
+                height: MediaQuery.of(context).size.height / 3.5,
+                child: Column(
+                  children: [
+                    Gap(50.h),
+                    const IconBackAndMenuRow(),
+                    Gap(22.h),
+                    const RestaurantText(),
+                  ],
+                ),
+              ),
               Gap(32.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0.w),

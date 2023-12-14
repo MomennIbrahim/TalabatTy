@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/utlis/app_router.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
-import 'package:foodc_app/features/menu/presentation/screen/about_us_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/favorite_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/language_screen.dart';
-import 'package:foodc_app/features/menu/presentation/screen/offers_screen.dart';
 import 'package:go_router/go_router.dart';
 
-class MenuItem extends StatelessWidget {
-   MenuItem({super.key});
+class MenuItems extends StatelessWidget {
+   MenuItems({super.key});
 
   final List<String> menuList = [
     'My Favorite',
+    'Track Order',
     'Offers',
     'Language',
     'About Us',
@@ -20,6 +17,7 @@ class MenuItem extends StatelessWidget {
 
   final List<String> menuScreens=[
     AppRouter.kFavoriteScreen,
+    AppRouter.kTrackOrderScreen,
     AppRouter.kOfferScreen,
     AppRouter.kLanguageScreen,
     AppRouter.kAboutUsScreen,

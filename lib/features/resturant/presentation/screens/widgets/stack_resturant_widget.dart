@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodc_app/core/widgets/icon_back_and_menu_row.dart';
 import 'package:foodc_app/core/widgets/menu_icon.dart';
 import 'package:foodc_app/core/widgets/restaurant_text.dart';
 import 'package:gap/gap.dart';
