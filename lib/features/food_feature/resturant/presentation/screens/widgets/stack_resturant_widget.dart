@@ -10,7 +10,9 @@ import 'package:foodc_app/features/food_feature/home/presentation/screens/widget
 import 'package:gap/gap.dart';
 
 class StackRestaurantWidget extends StatelessWidget {
-  const StackRestaurantWidget({super.key});
+  const StackRestaurantWidget({super.key, this.isFood = true});
+
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class StackRestaurantWidget extends StatelessWidget {
             Gap(50.h),
             Padding(
               padding: Constance.paddingHorizontal24,
-              child: const MenuIcon(),
+              child: MenuIcon(isFood: isFood),
             ),
             Gap(37.h),
             const RestaurantText(),
@@ -34,12 +36,23 @@ class StackRestaurantWidget extends StatelessWidget {
                 child: SearchBar(
                   controller: TextEditingController(),
                   onTap: () {},
-                  leading: SvgPicture.asset('assets/images/search.svg',width: 18.w,height: 18.h,),
+                  leading: SvgPicture.asset(
+                    'assets/images/search.svg',
+                    width: 18.w,
+                    height: 18.h,
+                  ),
                   trailing: [
-                    SizedBox(width: 100.w,child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 4.0.h),
-                      child: CustomButton(text: 'Search', onPressed: (){}, textStyle: Styles.styleWhite16,buttonColor: Constance.kPrimaryColor,),
-                    )),
+                    SizedBox(
+                        width: 100.w,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 4.0.h),
+                          child: CustomButton(
+                            text: 'Search',
+                            onPressed: () {},
+                            textStyle: Styles.styleWhite16,
+                            buttonColor: isFood? Constance.kPrimaryColor: Constance.kBLueColor,
+                          ),
+                        )),
                   ],
                   hintText: 'Find your Restaurant..',
                   hintStyle: MaterialStatePropertyAll(Styles.styleGrey14),

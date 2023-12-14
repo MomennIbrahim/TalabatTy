@@ -19,7 +19,7 @@ class DcCustomerFavoriteCuisinesItem extends StatelessWidget {
             child: CircleAvatar(
               radius: 16.r,
               backgroundImage:
-              const AssetImage('assets/images/Ellipse 36.jpg'),
+              const AssetImage('assets/images/Ellipse 36.png'),
             ),
           ),
           Text(
