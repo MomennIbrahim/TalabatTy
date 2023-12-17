@@ -48,7 +48,7 @@ class ClinicDetailsScreen extends StatelessWidget {
               ),
             ),
             Gap(18.h),
-            const DoctorsInTheClinicsListView(),
+            const DoctorsInTheClinicsListViewHorizontal(),
             Gap(24.h),
           ],
         ),

@@ -10,7 +10,7 @@ class DoctorCardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Container(
+    return Container(
       height: 270.h,
       width: 230.w,
       decoration: ShapeDecoration(

@@ -41,7 +41,7 @@ class AllClinicsScreen extends StatelessWidget {
             ),
           ),
           Gap(18.h),
-          const BestDoctorInTheClinicsListView(),
+          const BestDoctorInTheClinicsListViewHorizontal(),
           Gap(32.h),
           Align(
               alignment: Alignment.center,

@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/clinic_details_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/doctor_profile_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/reservation_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_layout/presentation/screen/dc_layout_screen.dart';
-import 'package:foodc_app/features/doctor_feature/doctor_profile/presentation/screens/doctor_profile_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/success_screen.dart';
@@ -49,12 +50,13 @@ abstract class AppRouter {
   static const kSavedAddressScreen = '/savedAddressScreen';
   static const kDcLayoutScreen = '/dcLayoutScreen';
   static const kClinicsDetailsScreen = '/clinicsDetaisScreen';
+  static const kDoctorProfileScreen = '/doctorProfileScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const DoctorProfileScreen();
+        return const ReservationScreen();
       },
     ),
     GoRoute(
@@ -187,6 +189,13 @@ abstract class AppRouter {
       path: kClinicsDetailsScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const ClinicDetailsScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kDoctorProfileScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const DoctorProfileScreen();
       },
     ),
   ]);
