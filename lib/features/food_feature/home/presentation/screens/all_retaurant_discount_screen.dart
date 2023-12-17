@@ -28,7 +28,7 @@ class AllRestaurantDiscountScreen extends StatelessWidget {
                     Gap(50.h),
                     const IconBackAndMenuRow(),
                     Gap(22.h),
-                    const RestaurantText(),
+                    const CustomText(text: 'restaurant'),
                   ],
                 ),
               ),

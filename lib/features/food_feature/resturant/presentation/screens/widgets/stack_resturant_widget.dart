@@ -27,7 +27,7 @@ class StackRestaurantWidget extends StatelessWidget {
               child: MenuIcon(isFood: isFood),
             ),
             Gap(37.h),
-            const RestaurantText(),
+            const CustomText(text: 'restaurant'),
             Gap(29.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0.w),

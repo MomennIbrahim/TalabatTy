@@ -8,8 +8,12 @@ import 'package:foodc_app/core/widgets/search_field.dart';
 import 'package:foodc_app/features/food_feature/home/presentation/screens/widgets/background_image.dart';
 import 'package:gap/gap.dart';
 
-class StackRestaurantDetailsWidget extends StatelessWidget {
-  const StackRestaurantDetailsWidget({super.key});
+class StackDetailsWidget extends StatelessWidget {
+  const StackDetailsWidget({super.key, required this.image, required this.text, this.isFood = true});
+
+  final String image;
+  final String text;
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +26,9 @@ class StackRestaurantDetailsWidget extends StatelessWidget {
             child: Column(
               children: [
                 Gap(40.h),
-                const IconBackAndMenuRow(),
+                IconBackAndMenuRow(isFood: isFood),
                 Gap(23.h),
-                const RestaurantText(),
+                CustomText(text: text.toUpperCase(),),
                 Gap(8.h),
                 Text(
                   'Select your area to see the restaurant menu',
@@ -51,8 +55,8 @@ class StackRestaurantDetailsWidget extends StatelessWidget {
                     color: Colors.grey
                 )
               ],
-              image: const DecorationImage(
-                image: AssetImage("assets/images/maqam.png"),
+              image: DecorationImage(
+                image: AssetImage(image),
                 fit: BoxFit.cover,
               ),
               shape: RoundedRectangleBorder(

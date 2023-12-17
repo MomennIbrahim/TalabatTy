@@ -80,6 +80,17 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle style18Weight700 = TextStyle(
+    fontSize: 18.0.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle styleBlue18 = TextStyle(
+    fontSize: 18.0.sp,
+    fontWeight: FontWeight.w400,
+    color: Constance.kBLueColor
+  );
+
   static TextStyle styleWhite18 = TextStyle(
     fontSize: 18.0.sp,
     color: Constance.kWhiteColor,

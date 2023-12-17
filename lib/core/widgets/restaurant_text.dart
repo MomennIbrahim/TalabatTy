@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 
-class RestaurantText extends StatelessWidget {
-  const RestaurantText({super.key});
+class CustomText extends StatelessWidget {
+  const CustomText({super.key, required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Text('RESTAURANTS',style: Styles.styleCabinSketch24,);
+    return Text(text,style: Styles.styleCabinSketch24,);
   }
 }

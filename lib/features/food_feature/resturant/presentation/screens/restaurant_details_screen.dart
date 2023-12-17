@@ -22,7 +22,7 @@ class RestaurantDetailsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const StackRestaurantDetailsWidget(),
+              const StackDetailsWidget(image: 'assets/images/maqam.png', text: 'restaurant',),
               Gap(130.h),
               const RatingBarAndResName(),
               Gap(22.h),

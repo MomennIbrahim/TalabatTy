@@ -1,11 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:foodc_app/features/doctor_feature/dc_clinics/presentation/screen/clinics_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/all_clinics_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_home/presentation/screens/dc_home_screen.dart';
 import 'package:foodc_app/features/food_feature/bag/presentation/screens/bag_screen.dart';
 import 'package:foodc_app/features/food_feature/profile/presentation/screens/profile_screen.dart';
-import 'package:foodc_app/features/food_feature/resturant/presentation/screens/resturant_screen.dart';
 import 'package:meta/meta.dart';
 
 part 'dc_layout_state.dart';
@@ -24,11 +23,10 @@ class DcLayoutCubit extends Cubit<DcLayoutState> {
 
   List<Widget> dcScreens = [
     const DcHomeScreen(),
-    const ClinicsScreen(),
+    const AllClinicsScreen(),
     const BagScreen(),
     const ProfileScreen(),
   ];
-
 
   List<String> dcIcons = [
     'assets/images/home-f.svg',
@@ -45,4 +43,5 @@ class DcLayoutCubit extends Cubit<DcLayoutState> {
   ];
 
   List<int> indexes = [0, 1, 2, 3];
+
 }

@@ -4,9 +4,10 @@ import 'package:foodc_app/core/widgets/menu_icon.dart';
 import 'package:go_router/go_router.dart';
 
 class IconBackAndMenuRow extends StatelessWidget {
-  const IconBackAndMenuRow({super.key, this.onPressed});
+  const IconBackAndMenuRow({super.key, this.onPressed, this.isFood = true});
 
   final Function? onPressed;
+  final bool isFood;
 
 
   @override
@@ -24,7 +25,7 @@ class IconBackAndMenuRow extends StatelessWidget {
                 Icons.arrow_back_ios_rounded,
                 color: Constance.kWhiteColor,
               )),
-           const MenuIcon(),
+          MenuIcon(isFood: isFood),
         ],
       ),
     );
