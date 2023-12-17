@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:gap/gap.dart';
 
-class RestaurantReviewItem extends StatelessWidget {
-  const RestaurantReviewItem({super.key});
+class CustomReviewItem extends StatelessWidget {
+  const CustomReviewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class RestaurantReviewItem extends StatelessWidget {
       decoration: ShapeDecoration(
         shadows: const [
           BoxShadow(
-            spreadRadius: .5,
-            blurRadius: 5,
+            spreadRadius: 0.5,
+            blurRadius: 5.0,
             offset: Offset(0, 2),
             color: Colors.black12
           )
@@ -23,7 +23,7 @@ class RestaurantReviewItem extends StatelessWidget {
         color: Colors.white,
         shape: RoundedRectangleBorder(
           side: const BorderSide(width: 1, color: Color(0xFFDDDDDD)),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.r),
         ),
       ),
       child: Padding(
