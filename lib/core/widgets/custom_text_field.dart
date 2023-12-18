@@ -11,6 +11,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.textStyle,
     this.fiiledColor,
+    this.borderRadius,
   });
 
   final TextEditingController controller;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final Icon? suffixIcon;
   final TextStyle? textStyle;
   final bool? fiiledColor;
+  final BorderRadius? borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder outLineInputBorder() {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(100.r),
+      borderRadius: borderRadius ?? BorderRadius.circular(100.r),
       borderSide: const BorderSide(color: Colors.grey),
     );
   }
