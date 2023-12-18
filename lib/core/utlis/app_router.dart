@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/clinic_details_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/doctor_profile_screen.dart';
-import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/reservation_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/reservation_summary_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_layout/presentation/screen/dc_layout_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
@@ -56,7 +56,7 @@ abstract class AppRouter {
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const ReservationScreen();
+        return const ReservationSummaryScreen();
       },
     ),
     GoRoute(
