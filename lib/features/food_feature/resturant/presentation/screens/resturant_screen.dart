@@ -20,7 +20,10 @@ class RestaurantScreen extends StatelessWidget {
           children: [
             const StackRestaurantWidget(),
             Gap(30.h),
-            const CustomTextRich(textSpan1: 'All', textSpan2: 'Restaurant'),
+            Padding(
+              padding: Constance.paddingHorizontal24,
+              child: const CustomTextRich(textSpan1: 'All', textSpan2: 'Restaurant'),
+            ),
             const AllRestaurantGridView(),
           ],
         ),

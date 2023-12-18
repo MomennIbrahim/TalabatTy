@@ -19,7 +19,7 @@ class AllRestaurantGridView extends StatelessWidget {
           mainAxisSpacing: 25.h,
           children: List.generate(9, (index) => GestureDetector(onTap: (){
             GoRouter.of(context).push(AppRouter.kRestaurantDetailsScreen);
-          },child: const AllRestaurantItem()),
+          },child: const PromoCodeItem(image: 'assets/images/maqam.png',)),
           )
       ),
     );

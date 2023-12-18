@@ -45,7 +45,7 @@ class OfferScreen extends StatelessWidget {
                 ),
               ),
               Gap(24.h),
-             const OffersGridView(),
+             const AllRestaurantOffersGridView(),
             ],
           ),
         ),

@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 
-class AllRestaurantItem extends StatelessWidget {
-  const AllRestaurantItem({super.key});
+class PromoCodeItem extends StatelessWidget {
+  const PromoCodeItem({super.key, required this.image});
+
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class AllRestaurantItem extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         children: [
           Image(
-            image: const AssetImage('assets/images/maqam.png'),
+            image: AssetImage(image),
             fit: BoxFit.cover,
             width: 150.w,
             height: 120.h,

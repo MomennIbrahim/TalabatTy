@@ -12,7 +12,7 @@ abstract class Constance {
   static const kPrimaryColor = Color(0xffFD7E7E);
   static const kWhiteColor = Colors.white;
   static const kGreyColor = Colors.grey;
-  static const kBLueColor = Color(0xff3A98EA);
+  static const kBLueColor = Color(0xFF3998EA);
   static const cabinSketchFont = 'CabinSketch';
   static EdgeInsets paddingHorizontal10 = EdgeInsets.symmetric(horizontal: 10.0.w);
   static EdgeInsets paddingHorizontal14 = EdgeInsets.symmetric(horizontal: 14.0.w);

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/features/food_feature/resturant/presentation/screens/widgets/all_resturant_item.dart';
 
-class AllRestaurantOffersGridView extends StatelessWidget {
-  const AllRestaurantOffersGridView({super.key});
+class ClinicsOffersGridView extends StatelessWidget {
+  const ClinicsOffersGridView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class AllRestaurantOffersGridView extends StatelessWidget {
       mainAxisSpacing: 18.h,
       crossAxisSpacing: 6.w,
       crossAxisCount: 3,
-      children: List.generate(9, (index) => const PromoCodeItem(image: 'assets/images/maqam.png',)),
+      children: List.generate(9, (index) => const PromoCodeItem(image: 'assets/images/Doctor testing patient eyesight.png',)),
     );
   }
 }

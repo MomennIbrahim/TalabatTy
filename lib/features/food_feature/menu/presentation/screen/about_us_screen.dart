@@ -7,7 +7,9 @@ import 'package:foodc_app/features/food_feature/menu/presentation/screen/widgets
 import 'package:gap/gap.dart';
 
 class AboutUsScreen extends StatelessWidget {
-  const AboutUsScreen({super.key});
+  const AboutUsScreen({super.key, this.isFood = true});
+
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,10 @@ class AboutUsScreen extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         height: 50.h,
-                        decoration: const BoxDecoration(color: Color(0xFFBE5F5F)),
+                        decoration: BoxDecoration(
+                            color: isFood
+                                ? const Color(0xFFBE5F5F)
+                                : Constance.kBLueColor),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                           child: Align(
@@ -57,7 +62,8 @@ class AboutUsScreen extends StatelessWidget {
                         padding: EdgeInsets.all(20.0.w.h),
                         child: Text(
                           'Foodc is a website and mobile app for ordering food and booking medical consultations, and it provides its services in various locations. Whether you find yourself immersed in the bustling heart of the city, residing in the suburbs, or in the surrounding areas, our services are readily available to meet your needs. Enjoy the unparalleled convenience of having food delivered directly to your door and booking your medical consultations with ease.',
-                          style: Styles.styleGrey18.copyWith(color: const Color(0xff0ff707070)),
+                          style: Styles.styleGrey18
+                              .copyWith(color: const Color(0xff0ff707070)),
                         ),
                       )
                     ],

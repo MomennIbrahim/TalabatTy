@@ -31,7 +31,11 @@ class _MenuIconState extends State<MenuIcon> {
       alignment: Alignment.centerRight,
       child: GestureDetector(
         onTap:  () {
-        GoRouter.of(context).push(AppRouter.kMenuScreen);
+          if(widget.isFood) {
+            GoRouter.of(context).push(AppRouter.kMenuScreen);
+          }else{
+            GoRouter.of(context).push(AppRouter.kDoctorMenuScreen);
+          }
         },
         child: SvgPicture.asset(
           widget.isFood?'assets/images/menu.svg':'assets/images/blue_icon_menu.svg',

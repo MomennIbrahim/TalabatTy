@@ -5,7 +5,7 @@ import 'package:foodc_app/core/constance.dart';
 import 'package:foodc_app/core/utlis/styles.dart';
 import 'package:foodc_app/core/widgets/custom_button.dart';
 import 'package:foodc_app/core/widgets/menu_icon.dart';
-import 'package:foodc_app/core/widgets/restaurant_text.dart';
+import 'package:foodc_app/core/widgets/custom_text.dart';
 import 'package:foodc_app/features/food_feature/home/presentation/screens/widgets/background_image.dart';
 import 'package:gap/gap.dart';
 

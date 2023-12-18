@@ -7,7 +7,9 @@ import 'package:foodc_app/features/food_feature/menu/presentation/screen/widgets
 import 'package:gap/gap.dart';
 
 class LanguageScreen extends StatelessWidget {
-  const LanguageScreen({super.key});
+  const LanguageScreen({super.key, this.isFood = true});
+
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class LanguageScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 12.h),
                         child: Text(
                           'English',
-                          style: Styles.stylePrimaryColor20,
+                          style: isFood? Styles.stylePrimaryColor20 : Styles.styleBlue20,
                         ),
                       ),
                     ),
