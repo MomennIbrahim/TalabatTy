@@ -9,10 +9,11 @@ import 'package:foodc_app/core/widgets/custom_text.dart';
 import 'package:foodc_app/features/food_feature/home/presentation/screens/widgets/background_image.dart';
 import 'package:gap/gap.dart';
 
-class StackRestaurantWidget extends StatelessWidget {
-  const StackRestaurantWidget({super.key, this.isFood = true});
+class StackResWidget extends StatelessWidget {
+  const StackResWidget({super.key, this.isFood = true, this.text});
 
   final bool isFood;
+  final String? text;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class StackRestaurantWidget extends StatelessWidget {
               child: MenuIcon(isFood: isFood),
             ),
             Gap(37.h),
-            const CustomText(text: 'restaurant'),
+            CustomText(text: text?.toUpperCase()?? 'restaurant'.toUpperCase()),
             Gap(29.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0.w),

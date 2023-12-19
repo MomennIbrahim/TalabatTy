@@ -18,7 +18,7 @@ class AllClinicsScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const StackRestaurantWidget(
+          const StackResWidget(
             isFood: false,
           ),
           Gap(29.h),

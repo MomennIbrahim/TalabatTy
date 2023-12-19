@@ -9,8 +9,9 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  const ProfileScreen({super.key, this.isFood = true});
 
+  final bool isFood;
   @override
   Widget build(BuildContext context) {
     return CustomSlideAnimate(
@@ -62,7 +63,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: (){
-                      GoRouter.of(context).push(AppRouter.kMyOrderScreen);
+                     isFood? GoRouter.of(context).push(AppRouter.kMyOrderScreen):GoRouter.of(context).push(AppRouter.kDoctorReservationScreen);
                     },
                     child: Row(
                       children: [

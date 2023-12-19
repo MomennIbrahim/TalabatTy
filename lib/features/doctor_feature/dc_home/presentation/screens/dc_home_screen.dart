@@ -35,6 +35,7 @@ class DcHomeScreen extends StatelessWidget {
           const FoodContainer(),
           Gap(18.h),
           const DoctorContainer(),
+          Gap(24.h),
         ],
       ),
     );

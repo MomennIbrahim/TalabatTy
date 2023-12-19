@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/clinic_details_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/doctor_profile_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/reservation_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/reservation_summary_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_all_clinics/presentation/screen/waiting_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_layout/presentation/screen/dc_layout_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_menu/presentation/screens/dc_favorites_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_menu/presentation/screens/dc_menu_screen.dart';
@@ -56,6 +59,9 @@ abstract class AppRouter {
   static const kDoctorMenuScreen = '/doctorMenuScreen';
   static const kDoctorFavoriteScreen = '/doctorFavoriteScreen';
   static const kDoctorOffersScreen = '/doctorOffersScreen';
+  static const kDoctorReservationScreen = '/doctorReservationScreen';
+  static const kDoctorReservationSummaryScreen = '/doctorReservationSummaryScreen';
+  static const kDoctorWaitingScreen = '/doctorWaitingScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -222,6 +228,27 @@ abstract class AppRouter {
       path: kDoctorOffersScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const DcOffersScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kDoctorReservationScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const ReservationScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kDoctorReservationSummaryScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const ReservationSummaryScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kDoctorWaitingScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const WaitingScreen();
       },
     ),
   ]);

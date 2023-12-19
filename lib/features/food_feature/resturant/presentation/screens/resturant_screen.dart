@@ -18,7 +18,7 @@ class RestaurantScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const StackRestaurantWidget(),
+            const StackResWidget(),
             Gap(30.h),
             Padding(
               padding: Constance.paddingHorizontal24,
