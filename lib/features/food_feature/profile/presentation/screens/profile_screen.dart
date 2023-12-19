@@ -12,13 +12,14 @@ class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key, this.isFood = true});
 
   final bool isFood;
+
   @override
   Widget build(BuildContext context) {
     return CustomSlideAnimate(
       slide: Constance.up,
       child: Column(
         children: [
-          const StackProfileWidget(),
+          StackProfileWidget(isFood: isFood),
           Gap(48.h),
           Container(
             width: 327.w,
@@ -51,8 +52,9 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       Gap(8.w),
                       GestureDetector(
-                        onTap: (){
-                          GoRouter.of(context).push(AppRouter.kEditProfileScreen);
+                        onTap: () {
+                          GoRouter.of(context)
+                              .push(AppRouter.kEditProfileScreen,);
                         },
                         child: Text(
                           'Edit Profile',
@@ -62,8 +64,11 @@ class ProfileScreen extends StatelessWidget {
                     ],
                   ),
                   GestureDetector(
-                    onTap: (){
-                     isFood? GoRouter.of(context).push(AppRouter.kMyOrderScreen):GoRouter.of(context).push(AppRouter.kDoctorReservationScreen);
+                    onTap: () {
+                      isFood
+                          ? GoRouter.of(context).push(AppRouter.kMyOrderScreen)
+                          : GoRouter.of(context)
+                              .push(AppRouter.kDoctorMyReservationScreen);
                     },
                     child: Row(
                       children: [
@@ -73,24 +78,29 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         Gap(8.w),
                         Text(
-                          'My Order',
+                          isFood?'My Order':'My Reservation',
                           style: Styles.style20,
                         ),
                       ],
                     ),
                   ),
-                  Row(
-                    children: [
-                      Gap(14.w),
-                      const Icon(
-                        Icons.map_outlined,
-                      ),
-                      Gap(8.w),
-                      Text(
-                        'Saved Address',
-                        style: Styles.style20.copyWith(color: Colors.black),
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      GoRouter.of(context).push(AppRouter.kSavedAddressScreen);
+                    },
+                    child: Row(
+                      children: [
+                        Gap(14.w),
+                        const Icon(
+                          Icons.map_outlined,
+                        ),
+                        Gap(8.w),
+                        Text(
+                          'Saved Address',
+                          style: Styles.style20.copyWith(color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

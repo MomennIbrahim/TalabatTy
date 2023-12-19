@@ -25,7 +25,7 @@ class DcLayoutCubit extends Cubit<DcLayoutState> {
     const DcHomeScreen(),
     const AllClinicsScreen(),
     const MyReservationScreen(),
-    const ProfileScreen(),
+    const ProfileScreen(isFood: false),
   ];
 
   List<String> dcIcons = [

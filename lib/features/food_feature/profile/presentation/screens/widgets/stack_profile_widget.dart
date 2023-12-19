@@ -8,9 +8,10 @@ import 'package:foodc_app/features/food_feature/home/presentation/screens/widget
 import 'package:gap/gap.dart';
 
 class StackProfileWidget extends StatelessWidget {
-  const StackProfileWidget({super.key, this.hasBackIcon = false});
+  const StackProfileWidget({super.key, this.hasBackIcon = false, this.isFood = true});
 
   final bool hasBackIcon;
+  final bool isFood;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,13 @@ class StackProfileWidget extends StatelessWidget {
                       const BackIcon(),
                       Padding(
                         padding: Constance.paddingHorizontal24,
-                        child: const MenuIcon(),
+                        child: MenuIcon(isFood: isFood),
                       ),
                     ],
                   )
                 : Padding(
                     padding: Constance.paddingHorizontal24,
-                    child: const MenuIcon(),
+                    child: MenuIcon(isFood: isFood),
                   ),
             Gap(37.h),
             Text(

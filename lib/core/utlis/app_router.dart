@@ -8,6 +8,7 @@ import 'package:foodc_app/features/doctor_feature/dc_layout/presentation/screen/
 import 'package:foodc_app/features/doctor_feature/dc_menu/presentation/screens/dc_favorites_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_menu/presentation/screens/dc_menu_screen.dart';
 import 'package:foodc_app/features/doctor_feature/dc_menu/presentation/screens/dc_offers_screen.dart';
+import 'package:foodc_app/features/doctor_feature/dc_reservation/presentation/screens/my_reservation_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/forget_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/new_pasword_screen.dart';
 import 'package:foodc_app/features/food_feature/authentication/presentation/screens/forget_screen/success_screen.dart';
@@ -62,6 +63,7 @@ abstract class AppRouter {
   static const kDoctorReservationScreen = '/doctorReservationScreen';
   static const kDoctorReservationSummaryScreen = '/doctorReservationSummaryScreen';
   static const kDoctorWaitingScreen = '/doctorWaitingScreen';
+  static const kDoctorMyReservationScreen = '/doctorMyReservationScreen';
 
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
@@ -249,6 +251,13 @@ abstract class AppRouter {
       path: kDoctorWaitingScreen,
       builder: (BuildContext context, GoRouterState state) {
         return const WaitingScreen();
+      },
+    ),
+
+    GoRoute(
+      path: kDoctorMyReservationScreen,
+      builder: (BuildContext context, GoRouterState state) {
+        return const MyReservationScreen();
       },
     ),
   ]);
