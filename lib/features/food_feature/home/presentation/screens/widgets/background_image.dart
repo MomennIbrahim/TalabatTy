@@ -11,7 +11,7 @@ class BackGroundImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height?? MediaQuery.of(context).size.height / 2,
+      height: height?? MediaQuery.of(context).size.height / 4.0,
       width: double.maxFinite,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.r),

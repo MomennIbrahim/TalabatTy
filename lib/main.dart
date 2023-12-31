@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             child: MaterialApp.router(
               routerConfig: AppRouter.router,
               debugShowCheckedModeBanner: false,
-              title: 'TalabaTy',
+              title: 'Yalla Order',
               theme: ThemeData(
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 fontFamily: 'Roboto',

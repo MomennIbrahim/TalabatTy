@@ -30,7 +30,6 @@ import 'package:foodc_app/features/food_feature/profile/presentation/screens/my_
 import 'package:foodc_app/features/food_feature/profile/presentation/screens/saved_address_screen.dart';
 import 'package:foodc_app/features/food_feature/resturant/presentation/screens/menu_restaurant_screen.dart';
 import 'package:foodc_app/features/food_feature/resturant/presentation/screens/restaurant_details_screen.dart';
-import 'package:foodc_app/test.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {

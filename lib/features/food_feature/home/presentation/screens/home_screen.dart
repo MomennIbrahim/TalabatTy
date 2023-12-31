@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _refresh(){
-    return Future.delayed(const Duration(seconds: 1));
+ Future<void>  _refresh(){
+    return Future.delayed(const Duration(seconds: 1),);
   }
 }

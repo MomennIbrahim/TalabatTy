@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foodc_app/features/food_feature/bag/presentation/screens/bag_screen.dart';
 import 'package:foodc_app/features/food_feature/home/presentation/screens/home_screen.dart';
 import 'package:foodc_app/features/food_feature/profile/presentation/screens/profile_screen.dart';
+import 'package:foodc_app/features/food_feature/profile/presentation/screens/profile_screen2.dart';
 import 'package:foodc_app/features/food_feature/resturant/presentation/screens/resturant_screen.dart';
 import 'package:meta/meta.dart';
 
@@ -25,7 +26,7 @@ class LayoutCubit extends Cubit<LayoutState> {
     const HomeScreen(),
     const RestaurantScreen(),
     const BagScreen(),
-    const ProfileScreen(),
+    const ProfileScreen2(),
   ];
 
 

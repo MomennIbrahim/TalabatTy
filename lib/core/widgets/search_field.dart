@@ -4,14 +4,16 @@ import '../constance.dart';
 import 'custom_text_field.dart';
 
 class SearchField extends StatelessWidget {
-  const SearchField({super.key});
+  const SearchField({super.key, this.label});
+
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
     return  CustomTextField(
       controller: TextEditingController(),
       fiiledColor: true,
-      lable: 'Search for Restaurant...',
+      lable: label?? 'Search for Restaurant...',
       prefixIcon: const Icon(
         Icons.location_on_outlined,
         color: Constance.kGreyColor,
